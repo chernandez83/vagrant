@@ -3,3 +3,17 @@ vagrant halt
 vagrant destroy
 vagrant reload
 vagrant reload --provision
+vagrant status
+vagrant snapshot save default default_nginx
+vagrant snapshot list
+vagrant snapshot restore default default_nginx
+vagrant snapshot push
+vagrant snapshot pop
+
+vagrant plugin install vagrant-share
+# instalar ngrok y agregar la ruta al path
+# config.vm.network "forwarded_port", guest: 80, host: 8080
+vagrant share --http 8080
+vagrant share --http 8080 --debug
+# si vagrant share no funciona:
+ngrok http 8080
