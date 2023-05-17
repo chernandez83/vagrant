@@ -9,6 +9,8 @@ vagrant snapshot list
 vagrant snapshot restore default default_nginx
 vagrant snapshot push
 vagrant snapshot pop
+vagrant ssh
+vagrant ssh servername
 
 vagrant plugin install vagrant-share
 # instalar ngrok y agregar la ruta al path
